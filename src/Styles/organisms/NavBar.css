@@ -1,0 +1,149 @@
+/* Estilos para el Organismo NavBar.jsx */
+.navbar-organism {
+  position: fixed;           /* Hace que la barra quede fija al hacer scroll */
+  top: 0;                    /* La posiciona en la parte superior */
+  left: 0;
+  width: 100%;               /* Ocupa todo el ancho */
+  background-color: #fef7ec; /* Tu color actual */
+  padding: 10px 10px;
+  z-index: 10;             /* Evita que otros elementos se superpongan */
+}
+.brand-identity {
+  display: flex;
+  align-items: center;          /* Alinea verticalmente logo y texto */
+  gap: 1px;                    /* Espacio entre logo y texto */
+}
+
+.brand-logo img {
+  width: 40px;                  /* Ajusta tamaño del logo si es necesario */
+  height: auto;
+}
+
+/* Contenedor interno para manejar la alineación */
+.navbar-content {
+    /* Flexbox es la clave para la alineación horizontal */
+    display: flex;
+    /* Coloca BrandIdentity a la izquierda y PrimaryNavList a la derecha */
+    justify-content: space-between; 
+    /* Centra verticalmente los elementos */
+    align-items: center; 
+    gap: 20px;
+    /* Limita el ancho del contenido si es necesario */
+    max-width: 1200px; 
+    margin: 0 auto;
+    z-index: 11; /* Asegura que el logo y texto estén sobre todo */
+}
+/* Estilos para la Molécula PrimaryNavList.jsx */
+.primary-nav-list {
+    /* Usa Flexbox para alinear los enlaces */
+    display: flex;
+    /* Ajusta el espacio entre los enlaces */
+    gap: 30px; 
+    /* Elimina los puntos si se renderiza como <ul> */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Estilos para el Átomo Logo.jsx */
+.logo {
+    /* Establece un tamaño apropiado para el logo */
+    height: 50px; 
+    /* Asegura que la imagen sea nítida si usas un archivo SVG/PNG grande */
+    width: auto;
+}
+
+/* Enlaces del menú */
+.nav-link {
+  position: relative;
+  font-size: 1.6rem;
+  color: #1b2d3b; /* tono elegante oscuro */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Línea inferior animada */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* espacio entre texto y línea */
+  width: 0%;
+  height: 2px;
+  background-color: #0c4a4e; /* color del subrayado */
+  transition: width 0.3s ease;
+}
+
+/* Hover: cambia color y dibuja la línea */
+.nav-link:hover {
+  color: #0c4a4e;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.menu-image {
+  width: 40px;
+  height: 28px;
+}
+
+/* === VISTA MÓVIL === */
+@media (max-width: 765px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Oculta el menú por defecto */
+  .primary-nav-list {
+    display: none;
+  }
+
+  /* Cuando el menú está abierto, se despliega a pantalla completa */
+  .primary-nav-list.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fdf7ee;
+    z-index: 2;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .primary-nav-list li a {
+    font-size: 20px;
+    color: #003a3a;
+  }
+}
+
+/* Animación suave al abrir */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
