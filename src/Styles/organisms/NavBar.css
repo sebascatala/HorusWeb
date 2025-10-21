@@ -172,7 +172,7 @@
   }
 
   .primary-nav-list {
-    gap: 15px;                /* reduce el espacio entre enlaces */
+    gap: 25px;                /* reduce el espacio entre enlaces */
   }
 }
 
