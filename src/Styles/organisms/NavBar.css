@@ -35,7 +35,6 @@
     margin: 0 auto;
     z-index: 11; /* Asegura que el logo y texto estén sobre todo */
 }
-
 /* Estilos para la Molécula PrimaryNavList.jsx */
 .primary-nav-list {
     /* Usa Flexbox para alinear los enlaces */
@@ -47,6 +46,7 @@
     padding: 0;
     margin: 0;
 }
+
 
 /* Estilos para el Átomo Logo.jsx */
 .logo {
@@ -60,10 +60,11 @@
   filter: drop-shadow(0 0 2em #ffcc00aa); /* amarillo dorado translúcido */
 }
 
+
 /* Enlaces del menú */
 .nav-link {
   position: relative;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #1b2d3b; /* tono elegante oscuro */
   text-decoration: none;
   transition: color 0.3s ease;
@@ -164,6 +165,7 @@
     justify-content: space-between;
     padding: 10px 20px;
   }
+
 
   .nav-link {
     font-size: 1.3rem;        /* reduce el tamaño de los textos */
