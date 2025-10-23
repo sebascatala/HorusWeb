@@ -110,31 +110,33 @@
 
 /* === VISTA MÓVIL === */
 @media (max-width: 800px) {
-
   .menu-toggle {
     display: block;
   }
 
-  /* Oculta el menú por defecto */
+  /* Menú oculto por defecto: se mueve fuera de la pantalla hacia la izquierda */
   .primary-nav-list {
-    display: none;
-  }
-
-  /* Cuando el menú está abierto, se despliega a pantalla completa */
-  .primary-nav-list.open {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
     background-color: #fdf7ee;
     z-index: 2;
-    animation: fadeIn 0.3s ease-in-out;
+
+    transform: translateX(-100%);  /* <-- fuera de pantalla a la izquierda */
+    opacity: 0;                    /* invisible */
+    transition: transform 0.5s ease, opacity 0.4s ease;
+  }
+
+  /* Menú abierto */
+  .primary-nav-list.open {
+    transform: translateX(0); /* vuelve a su posición original */
+    opacity: 1;
   }
 
   .primary-nav-list li a {
@@ -145,18 +147,23 @@
   .brand-text {
     font-family: "tan-nimbus", sans-serif;
     font-size: 1.2rem;
-    color: #0f2027;               /* tono elegante oscuro */
+    color: #0f2027;
     letter-spacing: 1px;
     font-weight: 600;
-    margin: 0;                    /* elimina espacio por defecto del <p> */
+    margin: 0;
   }
-  .logo {
-    /* Establece un tamaño apropiado para el logo */
-    height: 45px; 
-    /* Asegura que la imagen sea nítida si usas un archivo SVG/PNG grande */
-    width: auto;
-    }
 
+  .logo {
+    height: 45px; 
+    width: auto;
+  }
+
+  .brand-identity {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    z-index: 4;
+  }
 }
 
 @media (min-width: 800px) and (max-width: 1200px) {
