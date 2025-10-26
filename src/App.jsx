@@ -1,15 +1,12 @@
-import { useState } from 'react'
-import './App.css'
-import NavBar from './Components/Organisms/NavBar'
+import React from "react";
+import "./App.css";
+import Home from "./Pages/Home/Home";
 
 function App() {
-
   return (
     <>
-      <NavBar />
-      <h1>Bienvenido a Horus Tours</h1>
+      <Home /> 
     </>
-  )
+  );
 }
-
-export default App
+export default App;

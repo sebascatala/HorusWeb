@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Button = ({ label,variant="primary", to  }) => {
+const Boton = ({ label,variant="primary", to  }) => {
  const navigate = useNavigate();
 
  const handleClick = () =>
@@ -24,4 +24,4 @@ const Button = ({ label,variant="primary", to  }) => {
   );
 };
 
-export default Button;
+export default Boton;

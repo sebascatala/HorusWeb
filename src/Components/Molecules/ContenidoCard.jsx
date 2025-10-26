@@ -1,17 +1,14 @@
-import Button from "../Atoms/boton";
-import CardTitle from "../Atoms/TituloCard";
-import CardText from "../Atoms/TextoCard";
+import React from "react";
+import TituloCard from "../Atoms/TituloCard";
+import TextoCard from "../Atoms/TextoCard";
 
-
-const CardContent =({title, text, primaryTo, secondatTo}) => 
-    (
-          <div className="p-5 flex flex-col items-center text-center">
-    <CardTitle text={title} />
-    <CardText text={text} />
-    <div className="flex gap-4 mt-2">
-      <Button label="Ver más" to={primaryTo} variant="primary" />
-      <Button label="Cancelar" to={secondaryTo} variant="secondary" />
+const ContenidoCard = ({ title, text }) => {
+  return (
+    <div className="contenido-card text-center">
+      <TituloCard title={title} />
+      <TextoCard text={text} />
     </div>
-  </div>
-    );
-    export default CardContent;
+  );
+};
+
+export default ContenidoCard;

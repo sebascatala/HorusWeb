@@ -1,24 +1,21 @@
 import React from "react";
-import CardContent from "../Molecules/ContenidoCard";
+import ContenidoCard from "../Molecules/ContenidoCard";
+import Boton from "../Atoms/Boton";
 
-
-const interactiveCard = ({ title, text, primaryTo, secondaryTo }) => {
+// CardInteractivo recibe props del Home.jsx
+const CardInteractivo = ({ title, text, primaryTo, secondaryTo }) => {
   return (
-    <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 w-80 p-6 text-center flex flex-col items-center">
-      
-      {/* Título */}
-      <TituloCard text={title} />
-
-      {/* Texto descriptivo */}
-      <TextoCard text={text} />
+    <div className="p-6 bg-white bg-opacity-80 rounded-2xl shadow-lg text-center max-w-md">
+      {/* Contenido con título y texto */}
+      <ContenidoCard title={title} text={text} />
 
       {/* Botones */}
-      <div className="flex gap-4 mt-4">
-        <Boton label="Eplorar Tours" to={primaryTo} variant="primary" />
-        <Boton label="Unete" to={secondaryTo} variant="secondary" />
+      <div className="flex justify-center gap-4 mt-4">
+        <Boton label="Explorar" to={primaryTo} variant="primary" />
+        <Boton label="Contáctanos" to={secondaryTo} variant="secondary" />
       </div>
     </div>
   );
 };
 
-export default interactiveCard;
+export default CardInteractivo;
