@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;               /* Ocupa todo el ancho */
   background-color: #FEFCF8; /* Tu color actual */
-  
+
   padding: 10px 10px;
   z-index: 10;             /* Evita que otros elementos se superpongan */
 }
@@ -51,7 +51,7 @@
 /* Estilos para el Átomo Logo.jsx */
 .logo {
     /* Establece un tamaño apropiado para el logo */
-    height: 55px; 
+    height: 82px; 
     /* Asegura que la imagen sea nítida si usas un archivo SVG/PNG grande */
     width: auto;
 }

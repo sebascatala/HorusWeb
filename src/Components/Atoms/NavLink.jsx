@@ -1,9 +1,11 @@
-// Si usas React Router, usarías <Link> en lugar de <a>
+// src/Components/Atoms/NavLink.jsx
+import { Link } from "react-router-dom";
+
 const NavLink = ({ to, label }) => {
   return (
-    <a href={to} className="nav-link">
+    <Link to={to} className="nav-link">
       {label}
-    </a>
+    </Link>
   );
 };
 

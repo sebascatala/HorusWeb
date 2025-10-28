@@ -1,15 +1,13 @@
-
-// src/Components/Molecules/PrimaryNavList.jsx
 import NavLink from '../Atoms/NavLink';
 
 const navItems = [
   { to: "/", label: "Home" },
-  { to: "/tours", label: "Tours" },
-  { to: "/login", label: "LogIn" },
-  { to: "/signup", label: "SignUp" },
-  { to: "/shop", label: "Shop" },
+  { to: "/treks", label: "Treks" },
+  { to: "/products", label: "Products" },
+  { to: "/enrolled", label: "Enrolled" },
+  { to: "/purchased", label: "Purchased" },
 ];
-const PrimaryNavList = ({ isOpen }) => {
+const SecundaryNavList = ({ isOpen }) => {
   return (
     <nav className={`primary-nav-list ${isOpen ? "open" : ""}`}>
       {navItems.map((item) => (
@@ -19,4 +17,4 @@ const PrimaryNavList = ({ isOpen }) => {
   );
 };
 
-export default PrimaryNavList;
+export default SecundaryNavList;

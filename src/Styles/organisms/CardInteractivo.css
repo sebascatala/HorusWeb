@@ -1,0 +1,101 @@
+.card-glass {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+
+  padding: 1rem 1.5rem;
+  max-width: 440px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --------- Textos --------- */
+.card-welcome {
+  font-family: "Georgia", serif;
+  font-size: 0.95rem;
+  color: #2f3e3e;
+  margin-bottom: 0.2rem;
+}
+
+.card-title {
+  font-family: "tan-nimbus", sans-serif;
+  font-size: 2.5rem;
+  color: black;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0.3rem 0;
+}
+
+.card-subtitle {
+  font-family: "Georgia", serif;
+  font-size: 1.5rem;
+  color: #2f3e3e;
+  margin: 0.5rem 0 0.2rem 0;
+}
+
+.card-text {
+  color: #305050;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0.4rem 0 0.8rem 0;
+  max-width: 95%;
+}
+
+/* --------- Botones --------- */
+.card-buttons {
+  display: flex;
+  gap: 1.3rem;
+  margin-top: 0.3rem;
+}
+
+.card-buttons .btn-primary {
+  background-color: #0b5d64;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+.card-buttons .btn-primary:hover {
+  background-color: #094b52;
+}
+
+.card-buttons .btn-secondary {
+  background: transparent;
+  color: #0b5d64;
+  font-weight: 600;
+  border: 2px solid #0b5d64;
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+.card-buttons .btn-secondary:hover {
+  background-color: rgba(11, 93, 100, 0.1);
+}
+
+/* --------- Responsive --------- */
+@media (max-width: 768px) {
+  .card-glass {
+    align-items: center;
+    text-align: center;
+    padding: 1.8rem;
+  }
+
+  .card-title {
+    font-size: 2.2rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+}
