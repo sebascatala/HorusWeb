@@ -1,12 +1,27 @@
-import "../../Styles/pages/LogIn.css"
+import "../../Styles/pages/LogIn.css";
+import loginBg from "../../assets/login.jpg";
+
 import NavBar from "../../Components/Organisms/NavBar";
-import CardInteractivo from "../../Components/Organisms/CardInteractivo";
+import Form from "../../Components/Organisms/Form";
 
 const LogIn = () => {
   return (
-    <div className="hero">
-        <NavBar />
-    </div>
+    <section
+      className="login-page"
+      style={{
+        backgroundImage: `url(${loginBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        minHeight: "100vh",
+      }}
+    >
+      <NavBar />
+
+      <div className="hero-content">
+        <Form title="Iniciar sesión" mode="login" />
+      </div>
+    </section>
   );
 };
 

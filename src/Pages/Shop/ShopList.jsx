@@ -6,6 +6,7 @@ const ShopList = () => {
       
       <NavBar />
       <h1>Shop</h1>
+      <h1>Tienda ShopList</h1>
     </div>
   );
 };

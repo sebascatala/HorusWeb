@@ -1,7 +1,7 @@
 const ManageProducts = () => {
   return (
     <div>
-      <h1>Todas las experiencias y tours</h1>
+      <h1>Manage Products</h1>
     </div>
   );
 };

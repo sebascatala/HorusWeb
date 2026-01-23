@@ -1,7 +1,7 @@
 const ManageTours = () => {
   return (
     <div>
-      <h1>Todas las experiencias y tours</h1>
+      <h1>Manage Tours</h1>
     </div>
   );
 };

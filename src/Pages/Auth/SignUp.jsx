@@ -1,12 +1,27 @@
 import "../../Styles/pages/SignUp.css"
 import NavBar from "../../Components/Organisms/NavBar";
-import CardInteractivo from "../../Components/Organisms/CardInteractivo";
+import Form from "../../Components/Organisms/Form";
+import loginBg from "../../assets/login.jpg";
 
 const SignUp = () => {
   return (
-    <div className="hero">
+    <section
+      className="login-page"
+      style={{
+        backgroundImage: `url(${loginBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        minHeight: "100vh",
+      }}
+    >
         <NavBar />
-    </div>
+
+        <div className="hero-content">
+          <Form title="Crear cuenta" mode="signup" />
+
+        </div>
+    </section>
   );
 };
 

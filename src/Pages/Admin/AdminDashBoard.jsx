@@ -1,7 +1,7 @@
 const AdminDashBoard = () => {
   return (
     <div>
-      <h1>Todas las experiencias y tours</h1>
+      <h1>Admin Dash</h1>
     </div>
   );
 };

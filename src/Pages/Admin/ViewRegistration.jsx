@@ -1,7 +1,7 @@
 const ViewRegistration = () => {
   return (
     <div>
-      <h1>Todas las experiencias y tours</h1>
+      <h1>View Registration</h1>
     </div>
   );
 };

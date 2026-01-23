@@ -5,7 +5,7 @@ const CreateYourTrip = () => {
     <div>
       
       <NavBar />
-      <h1>Todas las experiencias y tours</h1>
+      <h1>Create all CreateYourTrip</h1>
     </div>
   );
 };

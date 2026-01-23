@@ -5,9 +5,10 @@ import NavLink from '../Atoms/NavLink';
 const navItems = [
   { to: "/", label: "Home" },
   { to: "/tours", label: "Tours" },
-  { to: "/login", label: "LogIn" },
-  { to: "/signup", label: "SignUp" },
   { to: "/shop", label: "Shop" },
+  { to: "/activity", label: "Activity"},
+  { to: "/login", label: "LogIn" },
+  { to: "/signup", label: "SignUp" }
 ];
 const PrimaryNavList = ({ isOpen }) => {
   return (

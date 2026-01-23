@@ -1,11 +1,13 @@
-
+import "../../Styles/pages/Home.css";
 import NavBar from "../../Components/Organisms/NavBar";
-const Profile = () => {
+
+const Activity = () => {
   return (
     <div className="hero">
         <NavBar />
+        <p>Activity</p>
     </div>
   );
 };
 
-export default Profile;
+export default Activity;

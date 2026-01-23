@@ -5,6 +5,7 @@ import LogIn from "./Pages/Auth/LogIn";
 import SignUp from "./Pages/Auth/SignUp";
 import ShopList from "./Pages/Shop/ShopList";
 import ProductDetail from "./Pages/Shop/ProductDetail";
+import Activity from "./Pages/Activity/Activity";
 import AllTours from "./Pages/Tours/AllTours";
 import CreateYourTrip from "./Pages/Tours/CreateYourTrip";
 import TourDetail from "./Pages/Tours/TourDetail";
@@ -22,6 +23,7 @@ function App() {
         <Route path="/tours" element={<AllTours />} />
         <Route path="/tours/create" element={<CreateYourTrip />} />
         <Route path="/tours/:id" element={<TourDetail />} />
+        <Route path="/activity" element={<Activity/>}/>
         
         <Route path="*" element={<NotFound />} />
       </Routes>
